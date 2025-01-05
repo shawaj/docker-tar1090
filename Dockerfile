@@ -72,7 +72,7 @@ RUN \
     # tar1090: add nginx config
     cp -Rv /app/rootfs/etc/nginx.tar1090/* /etc/nginx/ && \
     # copy nginx config out of tar1090 install directory which might be updated while the container is running
-    cp -v "${TAR1090_INSTALL_DIR}/nginx-tar1090-webroot.conf" /etc/nginx/ && \
+    cp -v "${TAR1090_INSTALL_DIR}/nginx-tar1090.conf" /etc/nginx/nginx-tar1090-webroot.conf && \
     # aircraft-db, file in TAR1090_UPDATE_DIR will be preferred when starting readsb if tar1090-update enabled
     curl -o "${TAR1090_INSTALL_DIR}/aircraft.csv.gz" "https://raw.githubusercontent.com/wiedehopf/tar1090-db/csv/aircraft.csv.gz" && \
     # clone graphs1090 repo
