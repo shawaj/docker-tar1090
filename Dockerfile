@@ -62,7 +62,7 @@ RUN \
     # nginx: remove default config
     rm /etc/nginx/sites-enabled/default && \
     # tar1090: install using project copy of original script
-    bash /app/rootfs/tar1090-install.sh /run/readsb webroot "${TAR1090_INSTALL_DIR}" && \
+    bash /app/rootfs/tar1090-install.sh /run/readsb tar1090 "${TAR1090_INSTALL_DIR}" && \
     # tar1090-db: document version
     echo "tar1090-db $(cat ${TAR1090_UPDATE_DIR}/git-db/version)" >> VERSIONS && \
     # tar1090: document version
